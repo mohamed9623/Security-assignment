@@ -18,7 +18,11 @@ while len(pt) % 16: pt += "#"
 
 ct = "".join(encrypt(pt[i:i+16]) for i in xrange(0, len(pt), 16))
 open(sys.argv[1] + ".enc", "w").write(ct)
-It's a Feistel Network and hence the name generalized feistel. Basically chain rule. We can start by decrypting the d in the second step of encryption. From there it is easy to follow the chain and undo it. Here's the python script to decrypt the flag:
+
+
+It's a Feistel Network and hence the name generalized feistel. 
+Basically chain rule. We can start by decrypting the d in the second step of encryption. 
+From there it is easy to follow the chain and undo it. Here's the python script to decrypt the flag:
 
 ## run with python2
 from struct import pack, unpack
